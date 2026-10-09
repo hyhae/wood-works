@@ -50,11 +50,24 @@ npm run build
 npm run preview
 ```
 
-6. Deploy **the contents of `build/`** to a static host. Use the build command `npm run build` and output directory `build`. Routes are directories with `index.html`; retain those directories and `_app/` assets. Configure your host's not-found page to `404.html` where supported. The app expects hosting at the domain root.
+6. Deploy **the contents of `build/`** to a static host. Use the build command `npm run build` and output directory `build`. Routes are directories with `index.html`; retain those directories and `_app/` assets. Configure your host's not-found page to `404.html` where supported. By default the app uses the domain root. Set `BASE_PATH` to a repository path such as `/wood-works` when building and previewing a GitHub Pages project site.
 
 You must rebuild after content changes so new product URLs are prerendered. Changes to a product slug invalidate its old URL; keep slugs stable unless you intend that change. Publishing is manual, and the admin intentionally has no direct deploy button.
 
 **Import content ZIP** validates the schema, references, image files, allowed paths, and archive limits before replacing the local draft. An invalid import leaves the existing saved draft untouched. **Reset local draft** restores the currently built catalog; export a backup first.
+
+## GitHub Pages
+
+The `main` branch deploys automatically through `.github/workflows/deploy.yml` to https://hyhae.github.io/wood-works/. In the repository's **Settings → Pages**, select **GitHub Actions** as the source.
+
+The workflow uses Node 24, validates the app, and builds with `BASE_PATH=/wood-works`. For the same build locally:
+
+```sh
+BASE_PATH=/wood-works npm run build
+BASE_PATH=/wood-works npm run preview
+```
+
+Open `http://127.0.0.1:4173/wood-works/`. Normal `npm run dev` continues using `/`. Links, images, and CMS exports resolve against the configured base path; content ZIP paths remain portable.
 
 ## Content and images
 

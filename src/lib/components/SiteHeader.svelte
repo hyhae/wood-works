@@ -1,10 +1,10 @@
 <script lang="ts">
-  import { imageSrcset } from '#lib/image-sizes.ts';
+  import { imageSrc, imageSrcset } from '#lib/image-sizes.ts';
   import { onMount } from 'svelte';
   import { page } from '$app/state';
   import { IconArrowUpRight, IconMenu2, IconX, IconSun, IconMoon } from '@tabler/icons-svelte';
   import type { SiteContent } from '#lib/types.ts';
-  import { storefrontHref } from '#lib/links.ts';
+  import { siteHref, storefrontHref } from '#lib/links.ts';
   let { content, preview = false, images = {} }: { content: SiteContent; preview?: boolean; images?: Record<string, string> } = $props();
   let open = $state(false); let dark = $state(false);
   onMount(() => { dark = document.documentElement.dataset.theme === 'dark'; });
@@ -14,11 +14,11 @@
     try { localStorage.setItem('woodwork-theme', dark ? 'dark' : 'light'); } catch { /* Theme still works without persistence. */ }
   }
   const links = [['Home', '/'], ['Products', '/products/'], ['About us', '/about/'], ['Contact us', '/contact/']];
-  function active(path: string) { return preview ? (page.url.searchParams.get('view') || 'home') === (path === '/' ? 'home' : path.replaceAll('/', '')) : path === '/' ? page.url.pathname === '/' : page.url.pathname.startsWith(path); }
+  function active(path: string) { return preview ? (page.url.searchParams.get('view') || 'home') === (path === '/' ? 'home' : path.replaceAll('/', '')) : path === '/' ? page.url.pathname === siteHref('/') : page.url.pathname.startsWith(siteHref(path)); }
 </script>
 <header class="site-header">
   <a class="wordmark" href={storefrontHref(preview, '/')} aria-label={`${content.settings.businessName} home`}>
-    {#if content.settings.logo}<img src={images[content.settings.logo] || content.settings.logo} srcset={imageSrcset(content.settings.logo, images)} sizes="160px" alt={content.settings.logoAlt} width="160" height="40" />{:else}{content.settings.businessName.toLowerCase()}<span class="brand-period">.</span>{/if}
+    {#if content.settings.logo}<img src={imageSrc(content.settings.logo, images)} srcset={imageSrcset(content.settings.logo, images)} sizes="160px" alt={content.settings.logoAlt} width="160" height="40" />{:else}{content.settings.businessName.toLowerCase()}<span class="brand-period">.</span>{/if}
   </a>
   <nav class:mobile-open={open} aria-label="Main navigation">
     {#each links as [label, path]}<a href={storefrontHref(preview, path)} aria-current={active(path) ? 'page' : undefined} onclick={() => open = false}>{label}</a>{/each}

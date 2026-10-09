@@ -6,11 +6,12 @@
   import fontUrl from '@fontsource/manrope/files/manrope-latin-500-normal.woff2?url';
   import '#lib/styles.css';
   import { page } from '$app/state';
+  import { siteHref } from '#lib/links.ts';
   import { published } from '#lib/published.ts';
   import SiteHeader from '#lib/components/SiteHeader.svelte';
   import SiteFooter from '#lib/components/SiteFooter.svelte';
   let { children } = $props();
-  let admin = $derived(page.url.pathname.startsWith('/admin'));
+  let admin = $derived(page.url.pathname.startsWith(siteHref('/admin/')));
 </script>
 <svelte:head><link rel="preload" href={fontUrl} as="font" type="font/woff2" crossorigin="anonymous" /></svelte:head>
 <a href="#main" class="skip-link">Skip to content</a>
