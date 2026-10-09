@@ -1,0 +1,12 @@
+<script lang="ts">
+  import { IconBrandWhatsapp, IconMail, IconPhone, IconArrowUpRight, IconBrandFacebook, IconBrandInstagram } from '@tabler/icons-svelte';
+  import type { SiteContent } from '#lib/types.ts';
+  import { inquiryLinks } from '#lib/catalog.ts';
+  import { storefrontHref } from '#lib/links.ts';
+  let { content, preview = false }: { content: SiteContent; preview?: boolean } = $props();
+  let contacts = $derived(inquiryLinks(content));
+</script>
+<section class="section contact-page"><div class="page-heading"><p class="eyebrow">Get in touch</p><h1>Let’s make room<br />for something good.</h1><p>Have a piece in mind? We’d love to hear about your space.</p></div>
+  <div class="contact-grid"><div class="contact-primary"><h2>Start a conversation.</h2><p>Ask about a product, its materials, or the details that matter to you.</p><div class="inquiry-actions">{#if contacts.whatsapp}<a class="button primary" href={contacts.whatsapp} target="_blank" rel="noreferrer"><IconBrandWhatsapp size={20} /> Chat on WhatsApp</a>{/if}{#if contacts.email}<a class="contact-link" href={contacts.email}><IconMail size={20} /><span>{content.settings.email}</span><IconArrowUpRight size={20} /></a>{/if}{#if contacts.phone}<a class="contact-link" href={contacts.phone}><IconPhone size={20} /><span>{content.settings.phone}</span><IconArrowUpRight size={20} /></a>{/if}{#if !contacts.whatsapp && !contacts.email && !contacts.phone}<p class="contact-placeholder">Our contact details are coming soon. In the meantime, explore the collection.</p><a class="text-link" href={storefrontHref(preview, '/products/')}>Explore products <IconArrowUpRight size={18} /></a>{/if}</div></div>
+  <div class="contact-secondary">{#if content.settings.address}<div><h2>Find us</h2><p class="preserve-lines">{content.settings.address}</p></div>{/if}{#if content.settings.hours}<div><h2>Opening hours</h2><p class="preserve-lines">{content.settings.hours}</p></div>{/if}<div><h2>Follow along</h2><div class="contact-socials">{#if content.settings.facebook}<a href={content.settings.facebook} target="_blank" rel="noreferrer"><IconBrandFacebook size={20} /> Facebook <IconArrowUpRight size={18} /></a>{/if}{#if content.settings.instagram}<a href={content.settings.instagram} target="_blank" rel="noreferrer"><IconBrandInstagram size={20} /> Instagram <IconArrowUpRight size={18} /></a>{/if}{#if !content.settings.facebook && !content.settings.instagram}<p>Our social links are coming soon.</p>{/if}</div></div></div></div>
+</section>

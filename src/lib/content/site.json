@@ -1,0 +1,329 @@
+{
+  "version": 1,
+  "settings": {
+    "businessName": "Woodwork",
+    "tagline": "Considered furniture. Everyday living.",
+    "logo": "",
+    "logoAlt": "Woodwork",
+    "currency": "EGP",
+    "heroTitle": "A natural place to belong.",
+    "heroText": "Thoughtful forms. Honest materials. Discover wooden furniture made for the way you live.",
+    "heroImage": "/media/hero.webp",
+    "heroImageAlt": "Contemporary living room with a walnut coffee table and oak sideboard",
+    "homeIntroTitle": "Good design starts with the material.",
+    "homeIntroText": "Explore a collection of quiet shapes and expressive wood grains. From a first apartment to a forever home, find a piece that feels like yours.",
+    "aboutTitle": "Furniture with a natural point of view.",
+    "aboutText": "Woodwork is the starting point for your furniture brand. Replace this introduction with your own story: the people behind the pieces, the materials you choose, and what makes your approach special.\n\nThis sample collection explores simple silhouettes, natural wood textures, and thoughtful details for everyday spaces. Every photograph, specification, and price shown here is illustrative.\n\nTell visitors how you work, where they can see your collection, and how to discuss a piece with your team. You can update this entire page in Site Content in the admin editor.",
+    "aboutImage": "/media/coffee.webp",
+    "aboutImageAlt": "Sculptural walnut coffee table showing natural wood grain",
+    "footerText": "Thoughtful furniture for the spaces we call home.",
+    "email": "",
+    "phone": "",
+    "whatsapp": "",
+    "address": "",
+    "hours": "",
+    "facebook": "",
+    "instagram": "",
+    "sampleNotice": true
+  },
+  "categories": [
+    {
+      "id": "living",
+      "name": "Living",
+      "slug": "living",
+      "image": "/media/coffee.webp",
+      "imageAlt": "Walnut coffee table",
+      "visible": true,
+      "order": 0
+    },
+    {
+      "id": "dining",
+      "name": "Dining",
+      "slug": "dining",
+      "image": "/media/dining.webp",
+      "imageAlt": "Natural oak dining table",
+      "visible": true,
+      "order": 1
+    },
+    {
+      "id": "bedrooms",
+      "name": "Bedrooms",
+      "slug": "bedrooms",
+      "image": "/media/bed.webp",
+      "imageAlt": "Natural oak bed frame",
+      "visible": true,
+      "order": 2
+    },
+    {
+      "id": "chairs",
+      "name": "Chairs",
+      "slug": "chairs",
+      "image": "/media/chair.webp",
+      "imageAlt": "Walnut dining chair with a green seat",
+      "visible": true,
+      "order": 3
+    },
+    {
+      "id": "2e3b8801-109f-40c5-bea9-f535e9123741",
+      "name": "test",
+      "slug": "category-5",
+      "image": "",
+      "imageAlt": "",
+      "visible": true,
+      "order": 4
+    }
+  ],
+  "subcategories": [
+    {
+      "id": "coffee-tables",
+      "name": "Coffee Tables",
+      "slug": "coffee-tables",
+      "categoryId": "living",
+      "visible": true,
+      "order": 0
+    },
+    {
+      "id": "side-tables",
+      "name": "Side Tables",
+      "slug": "side-tables",
+      "categoryId": "living",
+      "visible": true,
+      "order": 1
+    },
+    {
+      "id": "tv-units",
+      "name": "TV Units",
+      "slug": "tv-units",
+      "categoryId": "living",
+      "visible": true,
+      "order": 2
+    },
+    {
+      "id": "accessories",
+      "name": "Accessories",
+      "slug": "accessories",
+      "categoryId": "living",
+      "visible": true,
+      "order": 3
+    },
+    {
+      "id": "dining-tables",
+      "name": "Dining Tables",
+      "slug": "dining-tables",
+      "categoryId": "dining",
+      "visible": true,
+      "order": 0
+    },
+    {
+      "id": "dining-chairs",
+      "name": "Dining Chairs",
+      "slug": "dining-chairs",
+      "categoryId": "dining",
+      "visible": true,
+      "order": 1
+    },
+    {
+      "id": "beds",
+      "name": "Beds",
+      "slug": "beds",
+      "categoryId": "bedrooms",
+      "visible": true,
+      "order": 0
+    },
+    {
+      "id": "chairs-dining",
+      "name": "Dining Chairs",
+      "slug": "dining-chairs",
+      "categoryId": "chairs",
+      "visible": true,
+      "order": 0
+    },
+    {
+      "id": "07d7ad89-e475-4301-aa62-c7a16aa137b4",
+      "name": "test subcateg",
+      "slug": "type-9",
+      "categoryId": "2e3b8801-109f-40c5-bea9-f535e9123741",
+      "visible": true,
+      "order": 0
+    }
+  ],
+  "products": [
+    {
+      "id": "p-coffee",
+      "name": "Forma Coffee Table",
+      "slug": "forma-coffee-table",
+      "price": 18500,
+      "description": "A sculptural oval silhouette, grounded by two rounded pedestals. Expressive walnut grain brings a natural warmth to the center of your living space.",
+      "dimensions": "120 × 65 × 35 cm",
+      "materials": "Solid walnut",
+      "finishes": "Natural matte oil",
+      "subcategoryIds": [
+        "coffee-tables"
+      ],
+      "images": [
+        {
+          "src": "/media/coffee.webp",
+          "alt": "Forma oval walnut coffee table with two pedestal legs"
+        }
+      ],
+      "visible": true,
+      "featured": true,
+      "order": 0
+    },
+    {
+      "id": "p-side",
+      "name": "Arc Side Table",
+      "slug": "arc-side-table",
+      "price": 6200,
+      "description": "A small companion with a generous presence. A circular oak top and three simple legs make room for a book, a cup, or a favorite object.",
+      "dimensions": "45 × 45 × 50 cm",
+      "materials": "Solid oak",
+      "finishes": "Natural clear coat",
+      "subcategoryIds": [
+        "side-tables"
+      ],
+      "images": [
+        {
+          "src": "/media/side.webp",
+          "alt": "Arc round oak side table"
+        }
+      ],
+      "visible": true,
+      "featured": true,
+      "order": 1
+    },
+    {
+      "id": "p-tv",
+      "name": "Line Media Unit",
+      "slug": "line-media-unit",
+      "price": 28500,
+      "description": "A calm horizontal line for your living room. Flush walnut doors keep everyday essentials close while a slim metal base gives the form a lighter feel.",
+      "dimensions": "180 × 42 × 48 cm",
+      "materials": "Walnut and powder-coated steel",
+      "finishes": "Natural walnut, charcoal legs",
+      "subcategoryIds": [
+        "tv-units"
+      ],
+      "images": [
+        {
+          "src": "/media/tv.webp",
+          "alt": "Line walnut media console on slim black legs"
+        }
+      ],
+      "visible": true,
+      "featured": false,
+      "order": 2
+    },
+    {
+      "id": "p-dining",
+      "name": "Gather Dining Table",
+      "slug": "gather-dining-table",
+      "price": 32500,
+      "description": "A place for unhurried meals and everyday conversation. Soft corners meet a sculptural trestle base in a dining table with a welcoming natural oak finish.",
+      "dimensions": "200 × 95 × 75 cm",
+      "materials": "Solid oak",
+      "finishes": "Natural matte oil",
+      "subcategoryIds": [
+        "dining-tables"
+      ],
+      "images": [
+        {
+          "src": "/media/dining.webp",
+          "alt": "Gather oak dining table with trestle base"
+        }
+      ],
+      "visible": true,
+      "featured": true,
+      "order": 3
+    },
+    {
+      "id": "p-chair",
+      "name": "Curve Dining Chair",
+      "slug": "curve-dining-chair",
+      "price": 8500,
+      "description": "A curved timber backrest and a soft sage seat bring a little ease to the dining table. Slender walnut legs keep the profile open and light.",
+      "dimensions": "50 × 52 × 78 cm",
+      "materials": "Solid walnut and upholstered fabric",
+      "finishes": "Natural walnut, sage upholstery",
+      "subcategoryIds": [
+        "dining-chairs",
+        "chairs-dining"
+      ],
+      "images": [
+        {
+          "src": "/media/chair.webp",
+          "alt": "Curve walnut dining chair with sage green seat"
+        }
+      ],
+      "visible": true,
+      "featured": true,
+      "order": 4
+    },
+    {
+      "id": "p-bed",
+      "name": "Rest Oak Bed",
+      "slug": "rest-oak-bed",
+      "price": 38500,
+      "description": "A low, understated frame for a slower end to the day. Natural oak and a simple timber headboard give the bedroom a sense of quiet continuity.",
+      "dimensions": "Fits a 180 × 200 cm mattress",
+      "materials": "Solid oak",
+      "finishes": "Natural clear coat",
+      "subcategoryIds": [
+        "beds"
+      ],
+      "images": [
+        {
+          "src": "/media/bed.webp",
+          "alt": "Rest low oak bed frame with white linen"
+        }
+      ],
+      "visible": true,
+      "featured": false,
+      "order": 5
+    },
+    {
+      "id": "p-bowls",
+      "name": "Grain Bowl Set",
+      "slug": "grain-bowl-set",
+      "price": 2400,
+      "description": "Two turned walnut bowls that celebrate the material in its simplest form. Display them together or use them to hold the small things that make a room yours.",
+      "dimensions": "Diameters: 20 cm and 28 cm",
+      "materials": "Solid walnut",
+      "finishes": "Natural matte oil",
+      "subcategoryIds": [
+        "accessories"
+      ],
+      "images": [
+        {
+          "src": "/media/accessory.webp",
+          "alt": "Grain set of two sculptural walnut bowls"
+        }
+      ],
+      "visible": true,
+      "featured": false,
+      "order": 6
+    },
+    {
+      "id": "3ed8ea9f-f54f-4db2-becb-d908dbc77784",
+      "name": "test product",
+      "slug": "test-product",
+      "price": 12000,
+      "description": "test",
+      "dimensions": "test x test",
+      "materials": "wood",
+      "finishes": "matte",
+      "subcategoryIds": [
+        "beds"
+      ],
+      "images": [
+        {
+          "src": "/media/c213bf90-1f69-4cb7-8b2d-d963d6a14e28.png",
+          "alt": "test product"
+        }
+      ],
+      "visible": true,
+      "featured": false,
+      "order": 7
+    }
+  ]
+}
